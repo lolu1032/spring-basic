@@ -11,7 +11,15 @@ import static org.assertj.core.api.Assertions.*;
 public class AutoAppConfigTest {
     @Test
     void basicScan() {
-        ApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+//        ApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+//        MemberService memberService = ac.getBean(MemberService.class);
+//        assertThat(memberService).isInstanceOf(MemberService.class);
+//
+//        OrderServiceImpl bean = ac.getBean(OrderServiceImpl.class);
+//        MemberRepository memberRepository = bean.getMemberRepository();
+//        System.out.println("memberRepository = " + memberRepository);
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+
         MemberService memberService = ac.getBean(MemberService.class);
         assertThat(memberService).isInstanceOf(MemberService.class);
 
